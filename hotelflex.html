@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .flexbox {
+            flex-direction: row;
+        }
+
+        #header {
+            text-align: center;
+        }
+
+        .cards {
+            display: flex;
+            margin: 0px 5px 0px 5px;
+            height: 150px;
+            justify-content: space-between;
+        }
+
+        .card {
+            flex: 0 1 32%;
+            margin: 10px 10px 0px 10px;
+            text-align: center;
+            height: 492px;
+            width: 360px;
+            border-radius: 5px;
+            box-shadow: 5px 5px 4px 0px rgb(138, 136, 136);
+            background: rgb(247, 243, 243);
+
+        }
+
+        .flexbox>p.roomDiscription {}
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <h1 id="hotelName">Hotel Flex</h1>
+        <h3 id="slogan">Sleep Well</h3>
+        <div id="dropDown"></div>
+    </div>
+
+    <div class="flexbox">
+        <section class="cards">
+            <article class="card">
+                <div class="queen">Queen Room</div>
+                <img src="https://i.picsum.photos/id/142/372/248.jpg">
+                <p class="roomDiscription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ullamcorper a lacus vestibulum sed arcu non. Sit
+                    amet volutpat consequat mauris nunc congue nisi vitae suscipit. Elit ut aliquam purus sit amet
+                    luctus. Urna molestie at elementum eu facilisis. Nulla facilisi morbi tempus iaculis urna id
+                    volutpat lacus laoreet. At volutpat diam ut venenatis tellus in metus vulputate eu. Commodo quis
+                    imperdiet massa tincidunt nunc pulvinar. Dolor purus non enim praesent. Massa enim nec dui nunc
+                    mattis enim ut.</p>
+            </article>
+
+            <article class="card">
+                <div class="king">King Room</div>
+                <img src="https://i.picsum.photos/id/164/372/248.jpg">
+                <p class="roomDiscription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ullamcorper a lacus vestibulum sed arcu non. Sit
+                    amet volutpat consequat mauris nunc congue nisi vitae suscipit. Elit ut aliquam purus sit amet
+                    luctus. Urna molestie at elementum eu facilisis. Nulla facilisi morbi tempus iaculis urna id
+                    volutpat lacus laoreet. At volutpat diam ut venenatis tellus in metus vulputate eu. Commodo quis
+                    imperdiet massa tincidunt nunc pulvinar. Dolor purus non enim praesent. Massa enim nec dui nunc
+                    mattis enim ut.</p>
+            </article>
+
+            <article class="card">
+                <div class="twin">Twin Room</div>
+                <img src="https://i.picsum.photos/id/193/372/248.jpg">
+                <p class="roomDiscription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ullamcorper a lacus vestibulum sed arcu non. Sit
+                    amet volutpat consequat mauris nunc congue nisi vitae suscipit. Elit ut aliquam purus sit amet
+                    luctus. Urna molestie at elementum eu facilisis. Nulla facilisi morbi tempus iaculis urna id
+                    volutpat lacus laoreet. At volutpat diam ut venenatis tellus in metus vulputate eu. Commodo quis
+                    imperdiet massa tincidunt nunc pulvinar. Dolor purus non enim praesent. Massa enim nec dui nunc
+                    mattis enim ut.</p>
+            </article>
+
+        </section>
+
+
+    </div>
+    <script src="hotelflex.js"></script>
+</body>
+
+</html>
