@@ -13,6 +13,7 @@
 
         #header {
             text-align: center;
+            color: cornflowerblue;
         }
 
         .cards {
@@ -26,7 +27,7 @@
             flex: 0 1 32%;
             margin: 10px 10px 0px 10px;
             text-align: center;
-            height: 492px;
+            height: 522px;
             width: 360px;
             border-radius: 5px;
             box-shadow: 5px 5px 4px 0px rgb(138, 136, 136);
@@ -34,7 +35,15 @@
 
         }
 
-        .flexbox>p.roomDiscription {}
+        .flexbox>div#dropDown2 {
+            margin-top: 10px;
+            margin-bottom: 100px;
+        }
+
+        #end {
+            text-align: bottom;
+            height: 500px;
+        }
     </style>
 </head>
 
@@ -49,6 +58,7 @@
         <section class="cards">
             <article class="card">
                 <div class="queen">Queen Room</div>
+                <div id="dropDown2">jhghjg</div> <br>
                 <img src="https://i.picsum.photos/id/142/372/248.jpg">
                 <p class="roomDiscription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ullamcorper a lacus vestibulum sed arcu non. Sit
@@ -57,11 +67,13 @@
                     volutpat lacus laoreet. At volutpat diam ut venenatis tellus in metus vulputate eu. Commodo quis
                     imperdiet massa tincidunt nunc pulvinar. Dolor purus non enim praesent. Massa enim nec dui nunc
                     mattis enim ut.</p>
+
+
             </article>
 
             <article class="card">
                 <div class="king">King Room</div>
-                <img src="https://i.picsum.photos/id/164/372/248.jpg">
+                <img src="https://i.picsum.photos/id/193/372/248.jpg">
                 <p class="roomDiscription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ullamcorper a lacus vestibulum sed arcu non. Sit
                     amet volutpat consequat mauris nunc congue nisi vitae suscipit. Elit ut aliquam purus sit amet
@@ -73,7 +85,7 @@
 
             <article class="card">
                 <div class="twin">Twin Room</div>
-                <img src="https://i.picsum.photos/id/193/372/248.jpg">
+                <img src="https://i.picsum.photos/id/164/372/248.jpg">
                 <p class="roomDiscription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ullamcorper a lacus vestibulum sed arcu non. Sit
                     amet volutpat consequat mauris nunc congue nisi vitae suscipit. Elit ut aliquam purus sit amet
@@ -86,6 +98,9 @@
         </section>
 
 
+    </div>
+    <div id="end">
+        <p></p>
     </div>
     <script src="hotelflex.js"></script>
 </body>
