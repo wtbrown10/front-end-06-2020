@@ -36,8 +36,14 @@ document.addEventListener('DOMContentLoaded', function () {
             if (this.readyState === 4 && this.status === 200) {
                 const responseJSON = JSON.parse(this.responseText)
                 console.log(responseJSON)
-                document.getElementById("dataOutput").innerText = responseJSON[0].login;
+                // document.getElementById("dataOutput").innerText = responseJSON[0].login;
                 // let html += `<li>${responseJSON[0].login}</li>`
+                let html = "<ul>"
+                for (let i = 0; i < responseJSON.length; i++) {
+                    html = html + `<li>${responseJSON[i].login}</li>`
+                }
+                html = html + "</ul>"
+                document.getElementById('dataOutput').innerHTML = html
 
 
                 // troubleshooting
