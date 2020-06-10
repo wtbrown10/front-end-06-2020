@@ -18,8 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function showPosition(position) {
-    local.innerHTML = "Latitude: " + position.coords.latitude +
-      "<br>Longitude: " + position.coords.longitude;
+    local.innerHTML = `Latitude: ${position.coords.latitude}<br>Longitude: ${position.coords.longitude}`;
   }
 
   getLocation();
