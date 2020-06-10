@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const responseJSON = JSON.parse(this.responseText);
         console.log(responseJSON);
 
-        html = "<ul>";
+        let html = "<ul>";
         for (let i = 0; i < responseJSON.length; i++) {
           html += `<li>${responseJSON[i].login}</li>`;
         }
