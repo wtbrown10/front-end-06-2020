@@ -5,6 +5,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //   api.openweathermap.org/data/2.5/weather?zip={zip code},{country code}&appid={your api key}
 
+  // api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={your api key}
+
+  const local = document.getElementById('localWeather')
+
+  function getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+      local.innerHTML = "Geolocation is not supported by this browser.";
+    }
+  }
+
+  function showPosition(position) {
+    console.log(local.innerHTML = "Latitude: " + position.coords.latitude +
+      "<br>Longitude: " + position.coords.longitude);
+  }
+
+  getLocation();
+
+
   const url = "https://api.openweathermap.org/data/2.5/weather";
 
   document.getElementById("button").addEventListener("click", getWeather);
