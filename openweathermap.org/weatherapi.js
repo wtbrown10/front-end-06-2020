@@ -19,23 +19,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function showPosition(position) {
     local.innerHTML = `Latitude: ${position.coords.latitude}<br>Longitude: ${position.coords.longitude}`;
-  }
+    const latId = position.coords.latitude
 
-  getLocation();
+    const lonId = position.coords.longitude
 
 
-  const url = "https://api.openweathermap.org/data/2.5/weather";
+    const url = "https://api.openweathermap.org/data/2.5/weather";
 
-  document.getElementById("button").addEventListener("click", getWeather);
+    // document.getElementById("button").addEventListener("click", getWeather);
 
-  function getWeather() {
-    const zeq = "?zip=";
+    function getWeather() {
+      const zeq = "?zip=";
 
-    const countryCode = ",us";
+      const countryCode = ",us";
 
-    const zipCode = document.getElementById("zipCode").value;
+      const lat = '?lat='
 
-    if (zipCode.length === 5) {
+      const lon = '&lon='
+
       const id = "?id=";
 
       const city = "4930956";
@@ -44,9 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const apiKey = "9edeba1a521c36c2e47fabf5b8726988";
 
-      const combinedUrl = url + zeq + zipCode + countryCode + appId + apiKey;
-
-      console.log(zipCode);
+      const combinedUrl = url + lat + latId + lon + lonId + appId + apiKey;
 
       const xhr = new XMLHttpRequest();
 
@@ -74,8 +73,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       };
       xhr.send();
-    } else {
-      alert("Please Enter 5 Digit Zip Code!!");
+
     }
+    getWeather();
   }
+
+  getLocation();
+
 });
+
+
