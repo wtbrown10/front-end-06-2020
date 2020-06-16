@@ -29,16 +29,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 console.log(parsedResponseText);
 
-                let html = "<ul>";
-                for (let i = 0; i < 10; i++) {
+                let html = "<ol>";
+                for (let i = 1; i < 11; i++) {
+                    // let songArtist = parsedResponseText.content[i].artist
+                    // console.log(songArtist)
+
                     html =
                         html +
-                        `<li>Artist: ${parsedResponseText.content.rank}</li>` //['artist']} </li><p>Last Week:${parsedResponseText.content[i]['last week']}</p><p>Peak Postion: ${parsedResponseText.content[i]['peak position']}<p>Rank: ${parsedResponseText.content[i].rank}</p><p> Title: ${parsedResponseText.content[i].title}</p><p> Weeks at no.1: ${parsedResponseText.content[i]['weeks at no.1']}'</p><p>Weeks on chart ${parsedResponseText.data[i]['weeks on chart']}</p>;
+                        `<li>Artist: ${parsedResponseText.content[i].artist}</li><p> Title: ${parsedResponseText.content[i].title}</p><p>Rank: ${parsedResponseText.content[i].rank}</p><p>Last Week Rank: ${parsedResponseText.content[i]['last week']}</p><p>Peak Postion: ${parsedResponseText.content[i]['peak position']}</p><p> Weeks at #1: ${parsedResponseText.content[i]['weeks at no.1']}'</p><p>Weeks on chart: ${parsedResponseText.content[i]['weeks on chart']}</p>`;
 
                     console.log(parsedResponseText.content[i])
                 }
 
-                html = html + "</ul>";
+                html = html + "</ol>";
                 document.getElementById("list").innerHTML = html;
             }
 
