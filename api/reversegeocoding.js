@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (this.readyState === 4 && this.status === 200) {
                 const responseJSON = JSON.parse(this.responseText)
                 console.log(responseJSON)
-                console.log('fun')
+                console.log(`${responseJSON.results[3].address_components[1].long_name}, ${responseJSON.results[3].address_components[3].short_name}`)
                 document.getElementById('address').innerHTML = `Your address is: ${responseJSON.results[1].formatted_address}`
 
 
